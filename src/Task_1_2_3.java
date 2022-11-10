@@ -2,12 +2,12 @@ import java.util.Arrays;
 
 public class Task_1_2_3 {
     public static void main(String[] args) {
-        int[] mouth = generateRandomArray();
+        int[] month = generateRandomArray();
         double sum = 0;
-        int min = mouth[0];
-        int max = mouth[0];
+        int min = month[0];
+        int max = month[0];
         double avgSum = 0;
-        for (int oneDay : mouth) {
+        for (int oneDay : month) {
             sum += oneDay;
             if (max < oneDay) {
                 max = oneDay;
@@ -15,8 +15,8 @@ public class Task_1_2_3 {
                 min = oneDay;
             }
         }
-        avgSum = sum / mouth.length;
-        System.out.println(Arrays.toString(mouth));
+        avgSum = sum / month.length;
+        System.out.println(Arrays.toString(month));
         System.out.println("Сумма трат за месяц составила: " + (int) sum + " рублей.");
         System.out.println("Минимальаня сумма трат за день составила " + min + " руб. Максимальная сумма трат за день составила " + max + " руб.");
         System.out.println("Средняя сумма трат за месяц составила " + String.format("%.2f", avgSum) + " руб.");
